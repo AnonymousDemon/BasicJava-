@@ -19,7 +19,7 @@ public class Quadratric {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Utility utility = new Utility();
-		int a,b,x,y,c;
+		int a,b,x,c;
 		double delta,root1,root2;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter value of a");
@@ -30,6 +30,7 @@ public class Quadratric {
 		c = scanner.nextInt();
 		
         delta=utility.FindDeltaSquarRoot(a,b,c);
+        System.out.println("Delta"+delta);
 		
 		root1=utility.QuadraticEquation1(a,b,delta);
 		root2=utility.QuadraticEquation2(a,b,delta);

@@ -115,19 +115,56 @@ public class Utility {
 		
 	}
 	
+	/**
+	 * @param a inputs first number
+	 * @param b inputs second number
+	 * @param c inputs third number
+	 * @return delta square root of the equation
+	 */
 	public double FindDeltaSquarRoot(int a, int b, int c) {
-		int delta = (b * b) - (4 * a * c);
-		double sqrtDelta = Math.sqrt(delta);
-		return sqrtDelta;
+		double delt = ((b * b) - (4 * a * c));
+		double delta = Math.abs(delt);
+		return delta;
 	}
 	
-	public double QuadraticEquation1(int a, int b, double sqrtDelta) {
-		double equation1 = (-b + sqrtDelta) / (2 * a);
-		return equation1;
+	/**
+	 * @param a inputs first number
+	 * @param b inputs second number
+	 * @param delta calculates delta
+	 * @return root1 of the equation
+	 */
+	public double QuadraticEquation1(int a, int b, double delta) {
+		
+		double root1 ,d;
+		d=Math.sqrt(delta);
+	    root1 =(-b + d) / (2 * a);
+	    return root1;
 	}
 	
-	public double QuadraticEquation2(int a, int b, double sqrtDelta) {
-		double equation1 = (-b - sqrtDelta) / (2 * a);
-		return equation1;
+
+	/**
+	 * @param a inputs first number
+	 * @param b inputs second number
+	 * @param delta calculates delta
+	 * @return root2 of the equation
+	 */
+	public double QuadraticEquation2(int a, int b, double delta) {
+		double root2 ,d;
+		d=Math.sqrt(delta);
+	    root2 =(-b - d) / (2 * a);
+	    return root2;
 	}
+	
+	/**
+	 * @param x inputs first value
+	 * @param y inputs second value
+	 * @return distance calculate distance from (x,y) to (0,0).
+	 */
+	public double Distance(int x, int y) {
+		int d = (x*x+y*y);
+		double distance = Math.sqrt(d);
+		return distance;
+		
+	}
+	
 }
