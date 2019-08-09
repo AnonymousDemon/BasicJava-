@@ -204,9 +204,9 @@ public class Utility {
 	 * @param number
 	 * @return
 	 */
-	public int PowerOfTwo(int number) {
+	public int PowerOfTwo(int number,int power) {
 		int result;
-		result=(int)Math.pow(number, 2);
+		result=(int)Math.pow(number, power);
 		return result;
 	}
 
