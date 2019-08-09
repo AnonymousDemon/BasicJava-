@@ -184,6 +184,45 @@ public class Utility {
 	}
 	
 	/**
+	 * @param degree
+	 * @return
+	 */
+	public double findRadiun(int degree) {
+		return Math.toRadians(degree);
+	}
+	
+	public double findSin(double radiun) {
+		return Math.sin(radiun);
+	}
+	
+	public double findCos(double radiun) {
+		return Math.cos(radiun);
+	}
+	
+	public double findTan(double radiun) {
+		return Math.tan(radiun);
+	}
+	public double findCot(double radiun) {
+		double cot;
+		cot = 1 / Math.tan(radiun);
+		return cot;
+	}
+	
+	public double findSec(double radiun) {
+		double sec;
+		sec = 1 / Math.cos(radiun);
+		return sec;
+	}
+	
+	public double findCosec(double radiun) {
+		double csc;
+		csc = 1 / Math.sin(radiun);
+		return csc;
+	}
+	
+	
+	
+	/**
 	 * @param principalLoanAmount
 	 * @param year
 	 * @param rOI
