@@ -167,6 +167,12 @@ public class Utility {
 		
 	}
 	
+	/**
+	 * @param day
+	 * @param month
+	 * @param year
+	 * @return
+	 */
 	public int DayOfWeek(int day,int month, int year) {
 		int y1,x,m,d1;
 		y1 = year-(14-month)/12;
@@ -177,4 +183,53 @@ public class Utility {
 		
 	}
 	
+	/**
+	 * @param principalLoanAmount
+	 * @param year
+	 * @param rOI
+	 * @return
+	 */
+	public double LoanCalculator(int principalLoanAmount, int year, double rOI) {
+
+		double payment, r;
+		int n;
+		n = 12 * year;
+		r = (rOI / (12 * 100));
+
+		payment = (principalLoanAmount * r) / (1 - Math.pow(1 + r, -n));
+		return payment;
+	}
+	
+	/**
+	 * @param number
+	 * @return
+	 */
+	public int PowerOfTwo(int number) {
+		int result;
+		result=(int)Math.pow(number, 2);
+		return result;
+	}
+
+	
+	
+	/**
+	 * @param number
+	 */
+	public void PrintHarmonic(int number)
+	{
+		System.out.print("H=");
+		for(int i=1;i<=number;i++) 
+		{
+			if(i!=number)
+			{
+				System.out.print("");	
+			}
+			else 
+			{
+				System.out.print("1/"+i);
+			}
+			
+		}
+		
+	}
 }
