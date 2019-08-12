@@ -272,8 +272,8 @@ public class Utility {
 	 * @param trials
 	 */
 	public void Gambling(int stake, int goal, int trials) {
-		int bets=0 ;       
-        int wins=0 ; 
+		int bets = 0;
+		int wins = 0;
 		for (int t = 0; t < trials; t++) {
 
 			int cash = stake;
@@ -295,9 +295,58 @@ public class Utility {
 		System.out.println("Avg # bets           = " + 1.0 * bets / trials);
 
 	}
-	public void Prime(int n)
+
+	/**
+	 * @param number
+	 */
+	public void Prime(int n) 
 	{
+
+		int num;
+		String primeNumbers="";
+	       for (int i = 1; i <= n; i++)         
+	       { 		  	  
+	          int counter=0; 	  
+	          for(num =i; num>=1; num--)
+		  {
+	             if(i%num==0)
+		     {
+	 		counter = counter + 1;
+		     }
+		  }
+		  if (counter ==2)
+		  {
+		     //Appended the Prime number to the String
+		     primeNumbers = primeNumbers + i + " ";
+		  }	
+	       }	
+	       System.out.println("Prime numbers from 1 to "+n+" are :");
+	       System.out.println(primeNumbers);
 	
 	}
+
+	/**
+	 * @param arr
+	 * @param n
+	 */
+	public void Repeated(int[] arr, int n)
+	{
+
+		for(int i=0;i< arr.length-1;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+				System.out.println("Repeated = "+arr[j]);		
+			    }
+				
+			}
+		}		
+		
+	
+	}
+
+	
 
 }

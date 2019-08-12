@@ -16,7 +16,8 @@ public class PowerOf2 {
 		number = scanner.nextInt();
 		powerOfNumber = utility.PowerOfTwo(2, number);// 5 ==32
 
-		for (int i = 1; i <= powerOfNumber; i++) {
+		for (int i = 1; i <= powerOfNumber; i++) 
+		{
 
 			result = utility.PowerOfTwo(i, 2);
 			System.out.println(i + " to Power of 2 is : " + result);
