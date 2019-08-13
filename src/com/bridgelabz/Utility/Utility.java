@@ -277,15 +277,20 @@ public class Utility {
 		for (int t = 0; t < trials; t++) {
 
 			int cash = stake;
-			while (cash > 0 && cash < goal) {
+			while (cash > 0 && cash < goal) 
+			{
 				bets++;
-				if (Math.random() < 0.5) {
-					cash++;
-				} else {
-					cash--;
+				if (Math.random() < 0.5) 
+				{
+					cash++;//win
+				} 
+				else 
+				{
+					cash--;//lose
 				}
 			}
-			if (cash == goal) {
+			if (cash == goal) 
+			{
 				wins++;
 			}
 		}
@@ -346,6 +351,112 @@ public class Utility {
 		
 	
 	}
+	
+
+
+	/**
+	 * @param y
+	 * @return
+	 */
+	public int SwapNibbles(int y)
+	{
+		 
+		
+		int  x = (((y & 0x0F) << 4) |((y & 0xF0) >> 4));
+		System.out.println(x);	
+		return  x; 
+		 
+	}
+	
+	
+
+		
+	/*public int findSquareRootUsingNewtonsMethod(int n)
+	{
+		
+	}*/
+	
+
+
+	public double CalculateAngleX(int x) {
+		
+		return x%(2*180);
+	}
+
+	/**
+	 * @param angleX
+	 * @param noOddSeries
+	 */
+	public void PrintSinXSeries(double angleX, int noOddSeries) {
+		
+		int count=1;
+
+		System.out.print("Sin("+angleX+") = ");
+		System.out.print(angleX +" - ");
+		for(int i=3;i<=noOddSeries;) {
+			if(count%2!=0) {
+				System.out.print(Math.pow(angleX, i)+" / "+CalculateFactorial(i));
+				if(i!=noOddSeries) {
+					System.out.print(" + ");
+				}
+				
+				count++;
+				
+			}else {
+				System.out.print(Math.pow(angleX, i)+" / "+CalculateFactorial(i));
+				if(i!=noOddSeries) {
+					System.out.print(" - ");	
+				}
+				count++;
+			}
+			i=i+2;
+			
+		}
+		
+	}
+	/**
+	 * @param number
+	 * @return
+	 */
+	public int CalculateFactorial(int number) {
+		int fact=1;
+		for (int i=1;i<=number;i++) {
+			fact*=i;
+		}
+		return fact;
+	}
+
+	/**
+	 * @param angleX
+	 * @param noEvenSeries
+	 */
+	public void PrintCosXSeries(double angleX, int noEvenSeries) {
+		int count=1;
+		
+		System.out.print("Sin("+angleX+") = ");
+		System.out.print( "1 - ");
+		for(int i=2;i<=noEvenSeries;) {
+			if(count%2==0) {
+				System.out.print(Math.pow(angleX, i)+" / "+CalculateFactorial(i));
+				if(i!=noEvenSeries) {
+					System.out.print(" + ");
+				}
+				
+				count++;
+				
+			}else {
+				System.out.print(Math.pow(angleX, i)+" / "+CalculateFactorial(i));
+				if(i!=noEvenSeries) {
+					System.out.print(" - ");	
+				}
+				count++;
+			}
+			i=i+2;
+			
+		}
+		
+	}
+	
 
 	
 
