@@ -370,11 +370,6 @@ public class Utility {
 	
 	
 
-		
-	/*public int findSquareRootUsingNewtonsMethod(int n)
-	{
-		
-	}*/
 	
 
 
@@ -456,6 +451,13 @@ public class Utility {
 		}
 		
 	}
+	
+	
+	/*public int findSquareRootUsingNewtonsMethod(int n)
+	{
+		
+	}*/
+	
 	
 
 	

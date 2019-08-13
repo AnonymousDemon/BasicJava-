@@ -14,10 +14,10 @@ public class PrimeN {
 		Utility utility = new Utility();
 		System.out.println("Enetr a number");
 		n=scanner.nextInt();
-		nt fact=1;
+		int fact=1;
 		for(int i=2;i*i<=n;i++) {
-			
-			if(utility.Prime(i)){
+		utility.Prime(i);
+			{
 				
 				fact=utility.CalculateFactorial(i);
 				System.out.println("Factorial of number "+i+" is "+fact);
