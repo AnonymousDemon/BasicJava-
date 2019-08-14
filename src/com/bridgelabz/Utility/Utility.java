@@ -453,11 +453,90 @@ public class Utility {
 	}
 	
 	
-	/*public int findSquareRootUsingNewtonsMethod(int n)
+	/**
+	 * @param c
+	 * @return
+	 */
+	public double findSquareRootUsingNewtonsMethod(int c)
 	{
-		
-	}*/
+		double t, epsilon;
+		t = c;
+		epsilon=1*(Math.pow(10, -15));
+		epsilon = 1e-15;
+
+		while (Math.abs(t - c / t) > epsilon * t) {
+			t = (c / t + t) / 2.0;
+		}
+		return t;
+	}
 	
+	/**
+	 * @return
+	 */
+	public double mathRandomNumber() {
+
+		return Math.random();
+	}
+	
+	/**
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public double mathMinNumber(double a, double b) {
+		return Math.min(a, b);
+	}
+	
+	/**
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public double mathMaxNumber(double a, double b) {
+		return Math.max(a, b);
+	}
+	
+	
+	/**
+	 * @param velocity
+	 * @return
+	 */
+	public double velocityIntoSpeed(int velocity) {
+		double speed;
+		speed = velocity * 0.609;
+		return speed;
+	}
+	
+	/**
+	 * @param temperatureInFahrenheit
+	 * @param speed
+	 * @return
+	 */
+	public double CalculateWindChill(double temperatureInFahrenheit, double speed) {
+		double a, windChill, b, c;
+		a = 0.615 * temperatureInFahrenheit;
+		b = 0.4275 * temperatureInFahrenheit;
+		c = b - 35.75;
+		windChill = 35.74 + a + c * speed;
+		// windchill cannot be negative
+		windChill = Math.abs(windChill);
+		return windChill;
+	}
+	
+	public String[] ReverseStringArray(String[] namesArray, int start, int lengthOfArray) {
+
+		// for reversing the nameArray
+
+		String temp;
+		while (start < lengthOfArray) {
+			temp = namesArray[start];
+			namesArray[start] = namesArray[lengthOfArray];
+			namesArray[lengthOfArray] = temp;
+			start++;
+			lengthOfArray--;
+		}
+		return namesArray;
+	}
 	
 
 	
