@@ -52,8 +52,9 @@ public class DayOfWeek {
 				
 				else
 				{
-					d1 = utility.DayOfWeek(day, month, year);		
-					System.out.println("d1=" +d1);
+					d1 = utility.DayOfWeek(day, month, year);	
+					System.out.println("d1= ");
+					
 				}
 			
 			}

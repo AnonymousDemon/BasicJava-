@@ -15,6 +15,7 @@ public class Prime {
 		System.out.println("Enetr a no");
 		n = scanner.nextInt();
 		utility.Prime(n);
+		scanner.close();
 
     
 	}
