@@ -6,7 +6,7 @@ public class SecondLar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        int arr[]= {8,7,6,2,0,1};
+        int arr[]= {7,8,6,2,0,1};
         int larg = arr[0];
         int secondlarg = arr[0];
         int min = arr[0];
